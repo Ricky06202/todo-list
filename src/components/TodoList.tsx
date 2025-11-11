@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '../styles/global.css';
 
 interface Todo {
     id: number;
