@@ -53,9 +53,9 @@ export default function TodoList() {
             if (!todo) return;
 
             const response = await fetch(`${API_BASE_URL}/todos/${id}`, {
-                method: 'PUT',
+                method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...todo, completed: !todo.completed }),
+                body: JSON.stringify({ completed: !todo.completed }),
             });
 
             if (!response.ok) throw new Error('Failed to update todo');
